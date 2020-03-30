@@ -1,0 +1,63 @@
+#device-detail { 
+	.device-header {
+		padding-bottom: 20px;
+		
+		h2 { 
+			text-align:left;
+			margin-bottom:10px;
+			
+			&::before {
+				content: '';
+				position: absolute;
+				height: 4px;
+				width: 130px;
+				background-color: #00adef;
+				bottom:0;
+				left:0;
+				transform: none;
+			}
+		}
+	}
+	
+	.callout { 
+		margin:0 15px 15px 0;
+		padding:15px;
+		border-radius: 10px;
+		background-color: white;
+	}
+	
+	.device-content {
+		background-color: #eee;
+		padding-top: 15px;
+		
+		.company-information { 
+			.callout;	
+		}
+		.device-information { 
+			.callout;	
+		}
+		.event-information {
+			.callout;	
+			
+			ul {
+				list-style: disc;
+				padding-left: 20px;
+				margin: 0;
+				
+				li {
+					
+				}
+			}
+		}
+	}
+	.lvp { 
+		label {
+			display: inline-block;
+			width: 175px;
+			color:black;
+			font-weight:bold;
+			font-size: 15px;
+			text-align: left;
+		}			
+	}
+}

@@ -1,0 +1,90 @@
+@import '../_shared/styles/fonts.less';
+
+*{
+	margin:0;
+	padding: 0;
+}
+
+i{
+	font-family: 'OpenSans-Italic';
+}
+b,strong{
+	font-family: 'OpenSans-Bold';
+}
+
+body{
+	font-size: 15px;
+	font-family: 'OpenSans-Regular';
+}
+
+h2 {
+	color: #155186;
+	font-size: 25px;
+	line-height: 25px;
+	text-align: left;
+	padding: 15px 0;
+	position: relative;
+	display: inline-block;
+	font-family: 'OpenSans-ExtraBold';
+	margin-bottom: 30px;
+	text-align:center;
+	min-width:130px;
+	
+	&::before {
+		content: '';
+		position: absolute;
+		height: 4px;
+		width: 130px;
+		background-color: #00adef;
+		bottom:0;
+		left:50%;
+		transform: translateX(-50%);
+	}
+}
+
+h2.left {
+	left:0;
+	transform: none;
+}
+
+h3 { 
+    color : #00adef;
+    margin: 0 0 20px;
+    font-weight: bold;
+    font-size:20px;
+}
+
+.container {
+	box-sizing:border-box;
+	//color:rgb(51, 51, 51);
+	display:block;
+	margin : auto;
+	padding : 0;
+	padding: 0 20px;
+	text-size-adjust:100%;
+}
+
+video {
+	display: block;
+	margin: 0 auto;
+}
+
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+		
+  }
+}
+  
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+  
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}

@@ -1,0 +1,169 @@
+@import '../../_shared/styles/search-bar.less';
+@import '../../_shared/styles/fonts.less';
+
+#devices { 
+	.header {
+		background-color: #eee;
+		height:100px;
+		display: flex;
+		align-items:center;
+		
+		h2 { 
+			display: block;
+			margin: auto;
+		}
+	}
+	
+	.search {
+		padding: 15px 0;
+		border-bottom:1px solid silver;
+	}
+	
+	.search-results { 
+		padding: 15px 0;
+		
+		.search-results-container {
+			position: relative;
+			
+			.search-overlay {
+				position: absolute;
+				top: 0;
+				left : 0;
+				bottom: 0;
+				right: 0;
+				background-color: rgba(255,255,255,0.7);
+				display: none;
+				
+				img { 
+					display: block;
+					margin:auto;
+					align-self:center;
+					justify-self:center;
+				}
+			}
+		}
+		
+		table 
+		{
+			width : 100%;
+			margin:15px 0;
+			
+			td { 
+				padding:3px 6px;
+			}
+			
+			td,th {
+				border: solid 1px silver;
+				border-style:collapse;
+				font-family: 'OpenSans-Regular';
+				font-size: 12px;
+			}
+			
+			thead th { 
+				background-color: #00ADEF;
+				color:white;
+				text-align: center;
+				font-family: 'OpenSans-Bold';
+				height: 45px;
+			}
+			
+			.no-records {
+				padding: 100px;
+				text-align: center;
+			}
+		}
+	}
+	
+	
+	.search-pager {
+		
+		display:flex;
+		justify-content:space-between;
+		font-size:14px;
+		line-height:26px;
+		height:26px;
+		
+		* {
+			display:inline-block;
+		}
+		
+		.first, .last, .next, .prev {
+			height:26px;
+			width:26px;
+			margin:0 10px;
+			display: inline-block;
+			border: none;
+			overflow: hidden;
+			background-color: transparent;
+			position: relative;
+			color:rgba(0,0,0,0);
+		}
+		
+		.first:before,
+		.last:before,
+		.next:before,
+		.prev:before { 
+			color:black;
+			position: absolute;
+			font-family: 'FontAwesome';
+			height:26px;
+			width:26px;
+			line-height:26px;
+			top:0;
+			left:0;
+		}
+		
+		
+		.first:before { content : '\f04a'; }
+		.last:before { content : '\f04e'; }
+		.next:before { content : '\f04b'; }
+		.prev:before { content : '\f04b'; transform: rotate(180deg); }
+		
+	}
+}
+
+@media screen and (max-width:600px) {
+	#devices {
+		.search-pager {
+			display:block;
+			height:auto;
+			position: relative;
+
+			* {
+				display:inline-block;
+			}
+
+			>div {
+				display: block;
+			}
+
+			.prev-pages {
+				float: left;
+			}
+
+			.paper-size {
+				float: none;
+				margin: 0 auto;
+				width: 200px;
+				text-align: center;
+			}
+
+			.current-page {
+				clear: both;
+				float: left;
+			}
+
+			.total-records {
+				float: right;
+			}
+
+			.next-pages {
+				position: absolute;
+				right: 0;
+				top: 0;
+			}
+			
+		}
+	}
+    
+}

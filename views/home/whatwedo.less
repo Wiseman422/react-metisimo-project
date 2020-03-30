@@ -1,0 +1,76 @@
+#what-do-we-do {
+    position: relative;
+
+    
+    .container  {
+    	
+    	& > * {
+    		width :40%;
+    	}
+    	
+    	padding-top: 30px;
+    	padding-bottom: 30px;
+			
+		.search{
+		    position: relative;
+		    margin-top: 30px;
+		}
+		.search:before{
+		    content: '';
+		    width: 32px;
+		    height: 32px;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    left: 7px;
+		    margin: auto;
+		    background-image: url(/images/search.svg);
+		    background-size: cover;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		}
+		.search input::-webkit-input-placeholder {color:#939597;}
+		.search input::-moz-placeholder          {color:#939597;}/* Firefox 19+ */
+		.search input:-moz-placeholder           {color:#939597;}/* Firefox 18- */
+		.search input:-ms-input-placeholder      {color:#939597;}
+		.search input{
+		    height: 42px;
+		    width: 100%;
+		    padding-left: 55px;
+		    color: #939597;
+		    border-radius: 5px;
+		    border: 1px solid #939597;
+		    font-size: 15px;
+		    outline: none;
+		}
+    }
+
+	.dumbass-image {
+		height:400px;
+		width:50%;
+		position:absolute;
+		top:10px;
+		left:50%;
+				
+		background-image: url(/images/right_sec.svg);
+		background-repeat: no-repeat;
+		background-position: left top;
+		background-size: auto 100%;
+	}
+}
+
+
+@media screen and (max-width:600px) {
+	#what-do-we-do {
+    	
+		.container  {
+			& > * {
+				width :100%;
+			}
+		}
+		.dumbass-image {
+			display: none;
+		}
+	}
+    
+}
